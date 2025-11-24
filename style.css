@@ -1,0 +1,90 @@
+/* Palet Warna Tema Luar Angkasa/Retro:
+   - Background: #0a0a2a (Biru/ungu sangat gelap)
+   - Accent/Teks: #00ff00 (Hijau Neon) atau #ff00ff (Magenta Neon)
+*/
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #0a0a2a;
+    color: #00ff00; /* Hijau Neon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.game-wrapper {
+    text-align: center;
+    border: 5px solid #ff00ff; /* Magenta Neon border */
+    padding: 20px;
+    background-color: #0d0d3b;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #ff00ff80;
+}
+
+.title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #00ff00;
+}
+
+/* --- Canvas Game Area --- */
+#gameCanvas {
+    background-color: #000000; /* Hitam pekat untuk luar angkasa */
+    border: 2px solid #ff00ff;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+/* --- Info Score/Lives --- */
+#game-info {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    font-size: 0.8em;
+}
+
+#game-info span {
+    color: #fff000; /* Kuning cerah */
+}
+
+/* --- Status Message (Game Over/Start) --- */
+#status-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    border: 3px solid #ff00ff;
+    z-index: 10;
+    width: 80%;
+    max-width: 400px;
+}
+
+#status-message.hidden {
+    display: none;
+}
+
+#status-message h2 {
+    color: #e74c3c; /* Merah untuk Game Over */
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+#status-message button {
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.controls {
+    font-size: 0.7em;
+    margin-top: 10px;
+    color: #aaa;
+}
