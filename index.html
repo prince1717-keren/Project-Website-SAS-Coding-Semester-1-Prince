@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOLD RUSH ARENA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght=700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <div class="sidebar">
+            <h1 class="game-title">GOLD RUSH<br>ARENA</h1>
+            
+            <div id="main-menu">
+                <button id="play-btn" class="menu-btn interactive-btn"><i class="fas fa-play"></i> START GAME</button>
+            </div>
+
+            <div id="difficulty-menu" class="hidden">
+                <h2>Pilih Kesulitan Bot</h2>
+                <button data-level="easy" class="diff-btn">EASY</button>
+                <button data-level="normal" class="diff-btn active">NORMAL</button>
+                <button data-level="hard" class="diff-btn">HARD</button>
+                <button id="back-btn" class="menu-btn back-btn"><i class="fas fa-arrow-left"></i> Kembali</button>
+            </div>
+
+            <div id="game-info" class="hidden">
+                <p>Status: <span id="difficulty-display">NORMAL</span></p>
+                <p>Timer: <span id="gold-timer">0.0s</span></p>
+                <p class="mt-15">Player: **A/D** Gerak | **W** Lompat | **F** Basic Attack</p>
+            </div>
+        </div>
+
+        <div class="game-area">
+            
+            <div class="health-ui">
+                <div class="hero-health hero-blue">
+                    <div class="health-name">PLAYER (BIRU)</div>
+                    <div class="health-bar-bg">
+                        <div id="blueHealthBar" class="health-bar-inner"></div>
+                    </div>
+                </div>
+            </div>
+
+            <canvas id="duelCanvas" width="800" height="400" class="hidden"></canvas>
+
+            <div id="status-message" class="hidden">
+                <h2 id="final-result"></h2>
+                <button id="restart-button" class="interactive-btn"><i class="fas fa-undo"></i> RESTART (Enter)</button>
+                <button id="back-to-menu-btn" class="menu-btn back-btn"><i class="fas fa-home"></i> MENU UTAMA</button>
+            </div>
+            
+            <div id="splash-screen" class="center-text">
+                <h1>Selamat Datang di Gold Rush Arena!</h1>
+                <p>Tekan START GAME di Menu Samping untuk Bermain 1 Lawan 3 Bot.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

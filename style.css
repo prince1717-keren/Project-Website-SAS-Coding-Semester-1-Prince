@@ -1,0 +1,164 @@
+/* Palet Warna dan Font */
+:root {
+    --blue-team: #3498db;
+    --red-team: #e74c3c;
+    --background: #2c3e50;
+    --ui-text: #ecf0f1;
+    --gold: #f1c40f;
+    --sidebar-bg: #34495e;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    background-color: var(--background);
+    color: var(--ui-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* --- Struktur Utama --- */
+.main-container {
+    display: flex;
+    border: 5px solid var(--gold); 
+    border-radius: 15px;
+    background-color: var(--sidebar-bg);
+    box-shadow: 0 0 25px rgba(241, 196, 15, 0.4);
+    max-width: 1100px;
+    height: 500px; /* Tinggi total untuk menampung canvas 400px + padding */
+}
+
+/* --- Sidebar Menu --- */
+.sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: var(--sidebar-bg);
+    border-right: 2px solid var(--gold);
+    text-align: center;
+}
+
+.game-title {
+    font-size: 2.2em;
+    color: var(--gold);
+    margin-bottom: 30px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.menu-btn, .diff-btn, #restart-button {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.interactive-btn {
+    background-color: var(--blue-team);
+    color: white;
+}
+.interactive-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+.interactive-btn:active {
+    transform: translateY(0);
+}
+
+.back-btn {
+    background-color: #555;
+    color: white;
+    font-size: 0.9em;
+}
+.back-btn:hover { background-color: #444; }
+
+/* Tombol Kesulitan */
+.diff-btn {
+    background-color: #95a5a6;
+    color: #333;
+}
+.diff-btn.active, .diff-btn:hover {
+    background-color: var(--red-team);
+    color: white;
+}
+
+#game-info {
+    text-align: left;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed #555;
+}
+#game-info p { margin: 5px 0; font-size: 0.9em; }
+.mt-15 { margin-top: 15px !important; }
+
+/* --- Game Area (Canvas) --- */
+.game-area {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+#duelCanvas {
+    background-color: #1a1a2e;
+    border: 3px solid var(--gold);
+    display: block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Health UI - Disesuaikan untuk 1 Health Bar */
+.health-ui {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    height: 30px; 
+}
+.hero-health { width: 40%; }
+.health-name { font-size: 0.8em; }
+.health-bar-bg { height: 20px; }
+.hero-red { display: none; } /* Sembunyikan health bar Red */
+
+/* Status/Game Over Message */
+#status-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 30px;
+    border: 4px solid var(--gold);
+    z-index: 10;
+    width: 80%;
+    max-width: 400px;
+}
+#status-message h2 { margin-top: 0; }
+#status-message .back-btn { margin-top: 20px; }
+
+
+/* Splash Screen (Menu Awal) */
+#splash-screen {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #1a1a2e;
+    border: 3px solid var(--gold);
+}
+.center-text h1 { color: var(--gold); font-size: 2em; }
+.center-text p { font-size: 1.1em; color: #ccc; }
+
+
+/* Utility */
+.hidden { display: none !important; }
