@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGENDS DUEL ARENA | FIX</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="duel-container">
+        <h1>LEGENDS DUEL ARENA</h1>
+        
+        <div class="difficulty-selection">
+            <p>Atur Kesulitan Bot (Merah):</p>
+            <div class="difficulty-buttons">
+                <button id="easy-btn" data-level="easy">EASY</button>
+                <button id="normal-btn" data-level="normal" class="active">NORMAL</button>
+                <button id="hard-btn" data-level="hard">HARD</button>
+            </div>
+        </div>
+
+        <div class="health-ui">
+            <div class="hero-health hero-blue">
+                <div class="health-name">BLUE HERO (PLAYER)</div>
+                <div class="health-bar-bg">
+                    <div id="blueHealthBar" class="health-bar-inner"></div>
+                </div>
+            </div>
+            <div class="timer" id="difficulty-display">NORMAL</div>
+            <div class="hero-health hero-red">
+                <div class="health-name">RED HERO (BOT)</div>
+                <div class="health-bar-bg">
+                    <div id="redHealthBar" class="health-bar-inner"></div>
+                </div>
+            </div>
+        </div>
+
+        <canvas id="duelCanvas" width="800" height="400"></canvas>
+
+        <div id="status-message" class="hidden">
+            <h2 id="final-result"></h2>
+            <button id="restart-button">Restart (Enter)</button>
+        </div>
+
+        <div class="controls-info">
+            <p>Kontrol Player (Blue): **A/D** Gerak | **W** Lompat | **F** Basic | **G** Skill 1 | **H** Skill 2 | **J** Skill 3</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
